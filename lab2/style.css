@@ -8,6 +8,7 @@ body {
 nav {
   position: sticky;
 }
+
 .topnav {
   background-color: rgba(255, 255, 255, 0.795);
   overflow: hidden;
@@ -20,7 +21,13 @@ nav {
   text-align: center;
   padding: 15px 25px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 15px;
+}
+
+@media (min-width: 600px) {
+  .topnav a {
+    font-size: 25px;
+  }
 }
 
 .topnav a:hover {
@@ -40,12 +47,12 @@ nav {
 .welcome {
   display: grid;
   grid-template-columns: 100%;
-  background-image: url("image2.jpg");
+  background-image: url("images/image2.jpg");
   background-position: center center;
   background-attachment: fixed;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 550px;
+  height: 500px;
   width: 100%;
   padding-top: 80px;
   color: white;
@@ -62,7 +69,14 @@ nav {
 
 #logo {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 90px;
+  font-size: 40px;
+}
+
+@media (min-width: 800px) {
+  #logo {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 90px;
+  }
 }
 
 #hours {
@@ -90,11 +104,11 @@ nav {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 100%;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   #about {
     margin-left: 10%;
     margin-right: 10%;
@@ -118,7 +132,7 @@ span + hr {
 }
 @media (min-width: 600px) {
   #about-image {
-    background-image: url("image3.jpg");
+    background-image: url("images/image3.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -132,7 +146,7 @@ span + hr {
 }
 
 #quote {
-  background-image: url("image4.jpg");
+  background-image: url("images/image4.jpg");
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -155,53 +169,83 @@ span + hr {
 .menu-items {
   margin-top: 40px;
   display: grid;
-  grid-template-rows: 200px 200px;
+  grid-template-rows: 100px 100px;
   grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 1fr;
 }
 
+@media (min-width: 700px) {
+  .menu-items {
+    margin-top: 40px;
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 1fr;
+  }
+}
+
 .item {
-  font-size: 30px;
+  font-size: 15px;
   text-align: center;
-  padding: 20px;
+  padding: 5px;
+  padding-top: 20px;
+}
+
+@media (min-width: 700px) {
+  .item {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+  }
 }
 
 #one {
-  background-image: url("spaghetti.jpg");
+  background-image: url("images/spaghetti.jpg");
   background-size: cover;
 }
 #three {
-  background-image: url("pizza.jpg");
+  background-image: url("images/pizza.jpg");
   background-size: cover;
 }
 #five {
-  background-image: url("fish.jpg");
+  background-image: url("images/fish.jpg");
   background-size: cover;
 }
 #eight {
-  background-image: url("pastry.jpg");
+  background-image: url("images/pastry.jpg");
   background-size: cover;
 }
 #ten {
-  background-image: url("eggs.jpg");
+  background-image: url("images/eggs.jpg");
   background-size: cover;
 }
 #twelve {
-  background-image: url("rice.jpg");
+  background-image: url("images/rice.jpg");
   background-size: cover;
 }
 
 #reservation {
-  width: 800px;
+  width: 400px;
   margin: 0 auto;
-  padding: 50px;
+  padding: 20px;
   margin-top: 50px;
   text-align: center;
 }
 
-form {
-  background-color: #e66407;
+@media (min-width: 700px) {
+  #reservation {
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+
+.form {
+  background-color: #e76e17;
   padding: 20px;
   margin-top: 30px;
+  display: grid;
+  grid-template-columns: 100%;
 }
 
 div.elem-group {
@@ -252,7 +296,6 @@ button {
   border: 5px;
   color: black;
   font-size: 1.25em;
-  font-family: "Nanum Gothic";
   border-radius: 4px;
   cursor: pointer;
   margin-top: 20px;
