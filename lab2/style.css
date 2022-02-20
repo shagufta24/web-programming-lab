@@ -1,0 +1,291 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* overflow-x: hidden; */
+  width: 100vw;
+  overflow: auto;
+}
+
+nav {
+  position: sticky;
+}
+.topnav {
+  background-color: rgba(255, 255, 255, 0.795);
+  overflow: hidden;
+  padding-left: 20px;
+}
+
+.topnav a {
+  float: left;
+  color: #333;
+  text-align: center;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.topnav a:hover {
+  background-color: grey;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.bar-button {
+  float: left;
+}
+
+.welcome {
+  display: grid;
+  grid-template-columns: 100%;
+  background-image: url("image2.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 550px;
+  width: 100%;
+  padding-top: 80px;
+  color: white;
+  font-size: 40px;
+}
+
+.welcome-text {
+  position: relative;
+  /* top: 180px;
+  left: 500px; */
+  left: 45%;
+  color: white;
+}
+
+#logo {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 90px;
+}
+
+#hours {
+  font-size: 24px;
+}
+.timings {
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+.reserve-button {
+  color: white;
+  background-color: #e66407;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 6px;
+  border: none;
+  padding: 8px;
+}
+.reserve-button:hover {
+  background-color: #b44f07;
+}
+
+#about {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (min-width: 600px) {
+  #about {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 350px 100px 1fr;
+  }
+}
+
+span + hr {
+  height: 100px;
+  width: 50%;
+  color: #b44f07;
+}
+
+.image {
+  background-size: cover;
+}
+
+#about-image {
+}
+@media (min-width: 600px) {
+  #about-image {
+    background-image: url("image3.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.content {
+}
+.heading {
+  font-size: 40px;
+}
+
+#quote {
+  background-image: url("image4.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  color: white;
+  font-size: 40px;
+  position: relative;
+  text-align: center;
+  padding-top: 70px;
+  margin-top: 50px;
+}
+
+#menu {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.menu-items {
+  margin-top: 40px;
+  display: grid;
+  grid-template-rows: 200px 200px;
+  grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 1fr;
+}
+
+.item {
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+}
+
+#one {
+  background-image: url("spaghetti.jpg");
+  background-size: cover;
+}
+#three {
+  background-image: url("pizza.jpg");
+  background-size: cover;
+}
+#five {
+  background-image: url("fish.jpg");
+  background-size: cover;
+}
+#eight {
+  background-image: url("pastry.jpg");
+  background-size: cover;
+}
+#ten {
+  background-image: url("eggs.jpg");
+  background-size: cover;
+}
+#twelve {
+  background-image: url("rice.jpg");
+  background-size: cover;
+}
+
+#reservation {
+  width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+form {
+  background-color: #e66407;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+div.elem-group {
+  margin: 10px 0;
+  text-align: left;
+}
+
+div.elem-group.inlined {
+  width: 49%;
+  display: inline-block;
+  float: left;
+  margin-left: 1%;
+}
+
+label {
+  display: block;
+  padding-bottom: 10px;
+  font-size: 1.25em;
+}
+
+input,
+select,
+textarea {
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1em;
+  width: 100%;
+  padding: 5px;
+}
+
+div.elem-group.inlined input {
+  width: 95%;
+  display: inline-block;
+}
+
+textarea {
+  height: 250px;
+}
+
+hr {
+  border: 1px dotted #ccc;
+}
+
+button {
+  height: 50px;
+  background: darkorange;
+  border: 5px;
+  color: black;
+  font-size: 1.25em;
+  font-family: "Nanum Gothic";
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 200px;
+}
+
+button:hover {
+  background-color: #777;
+  color: white;
+}
+
+#contact {
+  margin-top: 50px;
+  text-align: center;
+}
+#contact-card {
+  background-color: rgb(193, 193, 193);
+  margin: 50px;
+  padding: 50px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.address {
+  text-align: left;
+}
+
+.address span {
+  font-size: 25px;
+}
+
+#to-top {
+  color: #b44f07;
+  font-size: 20px;
+}

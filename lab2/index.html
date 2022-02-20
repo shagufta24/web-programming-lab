@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a id="top"></a>
+    <nav class="topnav">
+      <a href="#about" class="bar-button">About</a>
+      <a href="#menu" class="bar-button">Menu</a>
+      <a href="#reservation" class="bar-button">Reservation</a>
+      <a href="#contact" class="bar-button">Contact Us</a>
+    </nav>
+
+    <div class="welcome" id="welcome">
+      <div class="welcome-text">
+        <span id="logo"><font color="#e66407">BELLE VIE</font> CAFE</span>
+        <div id="hours">
+          <span>Opening Hours:</span><br />
+          <span class="timings">Monday to Friday: 10 AM - 9 PM</span><br />
+          <span class="timings">Weekends: 3 PM - 11 PM</span>
+        </div>
+        <a href="#reservation">
+          <button class="reserve-button">Make a reservation</button>
+        </a>
+      </div>
+    </div>
+
+    <div id="about">
+      <div class="image" id="about-image"></div>
+      <div></div>
+      <div class="content">
+        <span class="heading">ABOUT US</span>
+        <hr />
+        <p>
+          Craving some delicious Italian food? Maybe you're in the mood for some
+          spicy Biryani? No matter what kind of meal you have in mind,
+          <font color="#e66407">Belle Vie Cafe</font> is ready to prepare it for
+          you. Since 2004, we have been the go-to diner for the youth of
+          Hyderabad. The first of its kind "gourmet diner" focusing on the
+          Indian youth, we aim to bring to you a fusion of Indian cuisine with
+          foods from around the world.
+        </p>
+        <p>
+          Our motto of "Every dish has a story to tell" comes to life with our
+          unique, modernist approach to food, where our guests not only enjoy
+          culinary innovations, but also the theatrical presentation of our
+          dishes. We're here to serve you the best gourmet diner experience of
+          your life. Book a table now!
+        </p>
+        <a href="#reservation">
+          <button class="reserve-button">Make a reservation</button>
+        </a>
+      </div>
+    </div>
+
+    <div id="quote">
+      <div class="content">"Every dish has a story to tell."</div>
+    </div>
+
+    <div id="menu">
+      <span class="heading">EXPLORE OUR MENU</span>
+      <hr style="margin: auto" />
+      <div class="menu-items">
+        <div id="one"></div>
+        <div id="two" class="item">Spaghetti and Meatballs</div>
+        <div id="three"></div>
+        <div id="four" class="item">Butter Chicken Pizza</div>
+        <div id="five"></div>
+        <div id="six" class="item">Amritsari-style Fish and Chips</div>
+        <div id="seven" class="item">Cream-filled Danish Pastry</div>
+        <div id="eight"></div>
+        <div id="nine" class="item">Fried eggs Chilli Shakshuka</div>
+        <div id="ten"></div>
+        <div id="eleven" class="item">Hyderabadi Donne Biryani</div>
+        <div id="twelve"></div>
+      </div>
+    </div>
+
+    <div id="reservation">
+      <span class="heading">BOOK YOUR TABLE TODAY!</span>
+      <!-- <hr style="margin: auto" /> -->
+      <form method="post">
+        <div class="elem-group">
+          <label for="name">Name: </label>
+          <input
+            type="text"
+            id="name"
+            name="visitor_name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="elem-group">
+          <label for="email">E-mail: </label>
+          <input
+            type="email"
+            id="email"
+            name="visitor_email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="elem-group">
+          <label for="phone">Phone: </label>
+          <input
+            type="tel"
+            id="phone"
+            name="visitor_phone"
+            placeholder="Enter your phone number"
+            required
+          />
+        </div>
+        <div class="elem-group inlined">
+          <label for="adult">Adults</label>
+          <input
+            type="number"
+            id="adult"
+            name="total_adults"
+            placeholder="0"
+            required
+          />
+        </div>
+        <div class="elem-group inlined">
+          <label for="child">Children</label>
+          <input
+            type="number"
+            id="child"
+            name="total_children"
+            placeholder="0"
+            required
+          />
+        </div>
+        <div class="elem-group inlined">
+          <label for="checkin-date">Date</label>
+          <input type="date" id="checkin-date" name="checkin" required />
+        </div>
+        <div class="elem-group inlined">
+          <label for="checkout-date">Time</label>
+          <input type="time" id="checkout-date" name="checkout" required />
+        </div>
+        <button type="submit">Confirm</button>
+      </form>
+    </div>
+
+    <div id="contact">
+      <span class="heading">CONTACT US</span>
+      <hr style="margin: auto" />
+      <div id="contact-card">
+        <div class="address">
+          <span>Address: </span>Plot no 22, Banjara Hills, Hyderabad<br />
+          <span>Phone: </span>+91-124-4235057<br />
+          <span>Email: </span>belle-ville@gmail.com
+        </div>
+        <div class="address">
+          <span>Address: </span>ARK Colony, Kukatpally, Hyderabad<br />
+          <span>Phone: </span>+91-124-423679<br />
+          <span>Email: </span>belle-ville@gmail.com
+        </div>
+      </div>
+      <a id="to-top" href="#top">To the top</a>
+    </div>
+  </body>
+</html>
