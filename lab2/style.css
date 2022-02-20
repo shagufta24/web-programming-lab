@@ -12,7 +12,7 @@ nav {
 .topnav {
   background-color: rgba(255, 255, 255, 0.795);
   overflow: hidden;
-  padding-left: 20px;
+  padding-left: 23px;
 }
 
 .topnav a {
@@ -26,7 +26,7 @@ nav {
 
 @media (min-width: 600px) {
   .topnav a {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 
@@ -60,9 +60,11 @@ nav {
 }
 
 .welcome-text {
-  position: relative;
-  /* top: 180px;
+  width: 600px;
+  /* position: absolute;
+  top: 180px;
   left: 500px; */
+  position: relative;
   left: 45%;
   color: white;
 }
@@ -322,10 +324,20 @@ button:hover {
 
 .address {
   text-align: left;
+  font-size: 15px;
 }
 
 .address span {
-  font-size: 25px;
+  font-size: 20px;
+}
+
+@media (min-width: 700px) {
+  .address {
+    font-size: 20px;
+  }
+  .address span {
+    font-size: 25px;
+  }
 }
 
 #to-top {
