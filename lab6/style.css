@@ -1,0 +1,13 @@
+.highlighted {
+  color: red;
+  background-color: black;
+}
+
+.highlighted_hover {
+  color: red;
+  background-color: yellow;
+}
+
+.bordered {
+  border: 2px solid blue;
+}

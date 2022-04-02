@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Temperature conversion</title>
+    <script>
+      function cToF(celsius) {
+        temp = document.getElementById("temp").value;
+        document.getElementById("result").innerHTML = (temp * 9) / 5 + 32;
+      }
+
+      function fToC(fahrenheit) {
+        temp = document.getElementById("temp").value;
+        document.getElementById("result").innerHTML = ((temp - 32) * 5) / 9;
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      Temperature : <input type="text" id="temp" /><br />
+      <br />
+      <input type="button" onClick="cToF()" value="Celsius to Fahrenheit" />
+      <br />
+      <input type="button" onClick="fToC()" value="Fahrenheit to Celsius" />
+      <br />The Result is : <br />
+      <span id="result"></span>
+    </form>
+  </body>
+</html>

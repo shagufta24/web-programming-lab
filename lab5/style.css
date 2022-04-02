@@ -1,0 +1,483 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* overflow-x: hidden; */
+  width: 100vw;
+  overflow: auto;
+}
+
+.hide {
+  display: none;
+}
+
+.section {
+  scroll-margin-top: 50px;
+}
+
+#topnav {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.85);
+  overflow: hidden;
+  padding-left: 23px;
+  z-index: 1;
+}
+
+#topnav a {
+  float: left;
+  color: #333;
+  text-align: center;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+@media (min-width: 600px) {
+  #topnav a {
+    font-size: 20px;
+  }
+}
+
+#topnav a:hover {
+  background-color: grey;
+  color: white;
+}
+
+#topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .body {
+  padding-top: 60px;
+}
+
+.bar-button {
+  float: left;
+}
+
+#welcome {
+  display: grid;
+  grid-template-columns: 100%;
+  background-image: url("images/image2.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 100%;
+  padding-top: 80px;
+  color: white;
+  font-size: 40px;
+}
+
+#welcome-text {
+  width: 600px;
+  /* position: absolute;
+  top: 180px;
+  left: 500px; */
+  position: relative;
+  left: 45%;
+  color: white;
+}
+
+#logo {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding-right: 50px;
+  font-size: 15px;
+}
+@media (min-width: 800px) {
+  #logo {
+    font-size: 20px;
+  }
+}
+
+#name {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 40px;
+}
+
+@media (min-width: 800px) {
+  #name {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 90px;
+  }
+}
+
+#hours {
+  font-size: 24px;
+}
+.timings {
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+.reserve-button {
+  color: white;
+  background-color: #e66407;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 6px;
+  border: none;
+  padding: 8px;
+}
+.reserve-button:hover {
+  background-color: #b44f07;
+}
+
+#about {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+@media (min-width: 800px) {
+  #about {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 350px 100px 1fr;
+  }
+}
+
+span + hr {
+  height: 100px;
+  width: 50%;
+  color: #b44f07;
+}
+
+.image {
+  background-size: cover;
+}
+
+#about-image {
+}
+@media (min-width: 600px) {
+  #about-image {
+    background-image: url("images/image3.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.content {
+}
+.heading {
+  font-size: 40px;
+}
+
+#quote {
+  background-image: url("images/image4.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  color: white;
+  font-size: 40px;
+  position: relative;
+  text-align: center;
+  padding-top: 70px;
+  margin-top: 50px;
+}
+
+#menu {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.menu-items {
+  margin-top: 40px;
+  display: grid;
+  grid-template-rows: 100px 100px;
+  grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 1fr;
+}
+
+@media (min-width: 700px) {
+  .menu-items {
+    margin-top: 40px;
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 1fr;
+  }
+}
+
+.item {
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+  padding-top: 20px;
+}
+
+@media (min-width: 700px) {
+  .item {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+#main-course {
+  display: none;
+}
+#appetizers {
+  display: none;
+}
+#desserts {
+  display: none;
+}
+
+#m1 {
+  background-image: url("images/spaghetti.jpg");
+  background-size: cover;
+}
+#m3 {
+  background-image: url("images/pizza.jpg");
+  background-size: cover;
+}
+#m5 {
+  background-image: url("images/fish.jpg");
+  background-size: cover;
+}
+#m8 {
+  background-image: url("images/kadaichicken.jpg");
+  background-size: cover;
+}
+#m10 {
+  background-image: url("images/eggs.jpg");
+  background-size: cover;
+}
+#m12 {
+  background-image: url("images/rice.jpg");
+  background-size: cover;
+}
+#m13 {
+  background-image: url("images/vadapav.jpg");
+  background-size: cover;
+}
+#m15 {
+  background-image: url("images/quesadilla.jpg");
+  background-size: cover;
+}
+#m17 {
+  background-image: url("images/strips.jpg");
+  background-size: cover;
+}
+#m20 {
+  background-image: url("images/mac.jpg");
+  background-size: cover;
+}
+#m22 {
+  background-image: url("images/paneer.jpg");
+  background-size: cover;
+}
+#m24 {
+  background-image: url("images/salad.jpeg");
+  background-size: cover;
+}
+#m25 {
+  background-image: url("images/churros.jpg");
+  background-size: cover;
+}
+#m27 {
+  background-image: url("images/chococake.jpg");
+  background-size: cover;
+}
+#m29 {
+  background-image: url("images/gjcheese.jpg");
+  background-size: cover;
+}
+#m32 {
+  background-image: url("images/pastry.jpg");
+  background-size: cover;
+}
+#m34 {
+  background-image: url("images/strawberry.jpg");
+  background-size: cover;
+}
+#m36 {
+  background-image: url("images/rasgulla.jpg");
+  background-size: cover;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: 0.5s;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+/* Change color of dropdown links on hover
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+/* .dropdown:hover .dropdown-content {
+  display: block;
+} */
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {
+  background-color: #3e8e41; */
+/* } */
+
+#reservation {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  #reservation {
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+
+.form {
+  background-color: #e76e17;
+  padding: 20px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+div.elem-group {
+  margin: 10px 0;
+  text-align: left;
+}
+
+div.elem-group.inlined {
+  width: 49%;
+  display: inline-block;
+  float: left;
+  margin-left: 1%;
+}
+
+label {
+  display: block;
+  padding-bottom: 10px;
+  font-size: 1.25em;
+}
+
+input,
+select,
+textarea {
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1em;
+  width: 100%;
+  padding: 5px;
+}
+
+div.elem-group.inlined input {
+  width: 95%;
+  display: inline-block;
+}
+
+textarea {
+  height: 250px;
+}
+
+hr {
+  border: 1px dotted #ccc;
+}
+
+button {
+  height: 50px;
+  background: darkorange;
+  border: 5px;
+  color: black;
+  font-size: 1.25em;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 200px;
+}
+
+button:hover {
+  background-color: #777;
+  color: white;
+}
+
+#contact {
+  margin-top: 50px;
+  text-align: center;
+}
+#contact-card {
+  background-color: rgb(193, 193, 193);
+  margin: 50px;
+  padding: 50px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.address {
+  text-align: left;
+  font-size: 15px;
+}
+
+.address span {
+  font-size: 20px;
+}
+
+@media (min-width: 700px) {
+  .address {
+    font-size: 20px;
+  }
+  .address span {
+    font-size: 25px;
+  }
+}
+
+#to-top {
+  color: #b44f07;
+  font-size: 20px;
+}

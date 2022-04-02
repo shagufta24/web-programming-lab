@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sum of digits</title>
+    <script>
+      function digit_to_one() {
+        num = parseInt(document.getElementById("number").value);
+        function findSum(n) {
+          if (n < 10) {
+            return n;
+          }
+          var sum = 0;
+          while (n > 0) {
+            sum += n % 10;
+            n = Math.floor(n / 10);
+          }
+          return findSum(sum);
+        }
+
+        var res = findSum(num);
+        console.log(res);
+        document.getElementById("result").innerHTML = res;
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      Enter the number: <input type="text" id="number" /><br />
+      <br />
+      <input type="button" onClick="digit_to_one()" value="Sum of digits" />
+      <br />The Result is : <br />
+      <span id="result"></span>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,314 @@
+
+<html>
+    <head>
+    <title>JQuery Experiments</title>
+    
+    <!-- The title says it all.  A page that gives us the opportunity to experiment with JQuery -->
+    
+    <!-- Load the style sheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <!-- Load JQuery -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"> </script>
+    
+    <!-- Our Script -->
+    <script type="text/javascript">
+
+    var highlight = 0;
+
+    $(document).ready(function() {
+
+        $('button').click(function () {
+        var title=$(this).text();
+        $('.log').append(title, " ")
+        });
+
+        $("#quotes").on('click', function () {
+            $('q').addClass('highlighted');
+        });
+
+        $("#unhighlight").on('click', function () {
+            $('*').removeClass('highlighted');
+        });
+
+        $("#alines").on('click', function () {
+            $(".poem p:nth-child(odd)").addClass('highlighted');
+        });
+
+        $("#hidepoem").on('click', function () {
+            $(".poem").hide();
+        });
+                
+        $("#showpoem").on('click', function () {
+            $(".poem").show();
+        });
+
+        $("#Education").on('click', function () {
+            $("td").removeClass('highlighted');
+            $(".Education").addClass('highlighted');
+            highlight = 1;
+        });
+
+        $("#Miscellaneous").on('click', function () {
+            $("td").removeClass('highlighted');
+            $(".Miscellaneous").addClass('highlighted');
+            highlight = 1;
+        });
+
+        $("#Party").on('click', function () {
+            $("td").removeClass('highlighted');
+            $(".Party").addClass('highlighted');
+            highlight = 1;
+        });
+
+        $("#Remove").on('click', function () {
+            $("td").removeClass('highlighted');
+            highlight = 0;
+        });
+
+        $("#tag").on('click', function () {
+            var date = $('#date').val();
+            var date_length = date.length;
+            if (date_length == 1) {
+                var id_name = 'dec0'.concat(date);
+            }
+            else {
+                var id_name = 'dec'.concat(date);
+            }
+            var option = $('#category').find(":selected").text();
+            console.log(id_name, option);
+            $("#"+id_name).addClass(option);
+            $("#"+option).click();
+        });
+
+        $("td").hover(
+            function(){
+                $(this).addClass("highlighted_hover");
+                var classes = $(this).attr("class").split(' ')
+                var filtered_classes = classes.filter(function(value, index, arr){ 
+                    return value != "highlighted" && value != "highlighted_hover";
+                });
+                var content = "Date: " + $(this).attr("id") + "<br> Tags: " + filtered_classes
+                $("#display-tags").html(content)
+            }, 
+            function(){
+                $(this).removeClass("highlighted_hover");
+                $("#display-tags").html("Hover on the above dates to see the tags.")
+        });
+
+        $("#select").on('click', function () {
+            var selector = $("#selector").val();
+            $(selector).addClass("bordered");
+        });
+
+        $("#unselect").on('click', function () {
+            $("*").removeClass("bordered");
+        });
+
+        $("#hide").on('click', function () {
+            var selector = $("#selector").val();
+            $(selector).hide();
+        });
+
+        $("#show").on('click', function () {
+            var selector = $("#selector").val();
+            $(selector).show();
+        });
+
+    });
+    </script>
+    </head>
+    <body>
+    
+    <div class="introduction">
+    <p>
+      This page is intended to provide a variety of types of elements for experiments in JQuery, CSS, and
+      JavaScript.
+    </p>
+    
+    <p>
+      The tasks to do on this page are described in a <a href="http://www.cs.grinnell.edu/~rebelsky/Courses/CSC325/Labs/jquery-lab.html">corresponding laboratory</a>.
+    </p>
+    </div>
+    
+    <hr width="50%">
+    
+    <p class="log">
+        Buttons Clicked: <br>
+    </p>
+    
+    <hr width="50%">
+    
+    <div id="buttonSet1">
+    <p>
+    <button type="button" id="quotes">Hightlight Quotes</button>
+    <button type="button" id="alines">Highlight Alternating Lines</button>
+    <button type="button" id="unhighlight">Unhighlight</button>
+    </p>
+    </p>
+    <button type="button" id="hidepoem">Hide Poem</button>
+    <button type="button" id="showpoem">Show Poem</button>
+    </p>
+    </div>
+    
+    <div class="poem">
+    <p>Twas brillig and the slithy toves did gyre and gimble in the wabe.  All mimsy were the borogoves and the mome raths outgrabe.</p>
+    <p><q>Beware the jabberwock my son, the jaws that bite, the claws that catch.  Beware the jubjub bird and shun the frumious bandersnatch.</q></p>
+    <p>He took his vorpal sword in hand.  Long time the manxome foe he sought.  So rested he by the tumtum tree and stood awhile in thought.</p>
+    <p>And while in uffish thought he stood, the jabberwock with eyes of flame came whiffling through the tulgey wood and burbled as it came.</p>
+    <p>One two.  One two.  And through and through the vorpal blade when snicker-snack.  He left it dead and with its head, he went galumphing back.</p>
+    <p><q>And hast thou slain the jabberwock?  Come to my arms by beamish boy.  Oh frabjuous day.  Callou!  Callay!</q> He chortled in his joy.</p>
+    <p>Twas brillig and the slithy toves did gyre and gimble in the wabe.  All mimsy were the borogoves and the mome raths outgrabe.</p>
+    </div>
+    
+    <hr width="50%">
+    
+    <div class="calendar">
+    
+    <table border=1>
+      <tr>
+        <th>S</th> <th>M</th> <th>T</th> <th>W</th> <th>T</th> <th>F</th> <th>S</th>
+      </tr>
+      <tr align="right">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td id="dec01">1</td>
+        <td id="dec02">2</td>
+        <td class="Education" id="dec03">3</td>
+        <td class="Miscellaneous" id="dec04">4</td>
+      </tr>
+      <tr align="right">
+        <td id="dec05">5</td>
+        <td id="dec06" class="Education">6</td>
+        <td id="dec07" class="Education Miscellaneous">7</td>
+        <td id="dec08">8</td>
+        <td id="dec09">9</td>
+        <td id="dec10">10</td>
+        <td id="dec11">11</td>
+      </tr>
+      <tr align="right">
+        <td id="dec12">12</td>
+        <td id="dec13">13</td>
+        <td id="dec14">14</td>
+        <td id="dec15" class="Education">15</td>
+        <td id="dec16">16</td>
+        <td id="dec17">17</td>
+        <td id="dec18">18</td>
+      </tr>
+      <tr align="right">
+        <td id="dec19">19</td>
+        <td id="dec20" class = "Education">20</td>
+        <td id="dec21">21</td>
+        <td id="dec22" class = "Party Miscellaneous">22</td>
+        <td id="dec23">23</td>
+        <td id="dec24">24</td>
+        <td id="dec25">25</td>
+      </tr>
+      <tr align="right">
+        <td id="dec26">26</td>
+        <td id="dec27">27</td>
+        <td id="dec28" class = "Party">28</td>
+        <td id="dec29">29</td>
+        <td id="dec30">30</td>
+        <td id="dec31">31</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+
+    <p id="display-tags">
+        Hover on the above dates to see the tags.
+    </p>
+    
+    <p>
+    <i>You can highlight tagged days by clicking one of the buttons below.</i>
+    </p>
+    
+    <div id="buttonSet3">
+    <button id="Education">Education</button>
+    <button id="Miscellaneous">Miscellaneous</button>
+    <button id="Party">Party</button>
+    <button id="Remove">Remove</button>
+    </div>
+    
+    <p>
+    <i>You can tag days by entering a date, selecting a category, and clicking the <q>Tag</q> button.</i>
+    </p>
+    
+    <p>
+    <input type="text" id="date" size=2>
+    
+    <select id="category">
+    <option value="Education">Education
+    <option value="Miscellaneous">Miscellaneous
+    <option value="Party">Party
+    </select>
+    <button id="tag">Tag</button>
+    </p>
+    
+    </div>
+    
+    <hr width="50%">
+    
+    <p>
+      When you enter a selector in the field and click <b>Select</b>, the appropriate part of the page will be highlighted
+      (using the the <code>.border</code> class).
+    </p>
+    
+    <input type="text" id="selector">
+    </input>
+    <button id="select">Select</button>
+    
+    <p>
+      We may want to unselect, too.
+    </p>
+    
+    <button id="unselect">Unselect All</button>
+    
+    <p>
+      Or hide/unhide.
+    </p>
+    
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    
+    <hr width="50%">
+    
+    <p>
+    A sample set of courses for the CS major at Grinnell.
+    </p>
+    
+    <div class="classes">
+    
+    <ul>
+      <li>
+        Introductory Sequence
+        <ul>
+          <li id="csc151">CSC 151</li>
+          <li id="csc161">CSC 161</li>
+          <li id="csc207">CSC 207</li>
+        </ul>
+      </li>
+      <li>
+        Mid-Level Courses
+        <ul>
+          <li id="csc211">CSC 211</li>
+          <li id="csc213">CSC 213</li>
+        </ul>
+      </li>
+      <li>
+        Upper-Level Courses
+        <ul>
+          <li id="csc301">CSC 301</li>
+          <li id="csc302">CSC 302</li>
+          <li id="csc325">CSC 325</li>
+          <li id="csc341">CSC 341</li>
+        </ul>
+      </li>
+    </ul>
+    
+    </div>
+    
+    </body>
+    </html>
+    
